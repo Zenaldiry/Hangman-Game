@@ -1,0 +1,54 @@
+[
+  {
+    "food": [
+      "eggs",
+      "tomato",
+      "potato",
+      "burger",
+      "sandwich",
+      "bread",
+      "onion",
+      "lemon",
+      "orange",
+      "water melon",
+      "strawberry",
+      "chocolate"
+    ],
+    "celebreties": [
+      "taim hasan",
+      "mirna shalfoun",
+      "ayman rida",
+      "bassem yakhour",
+      "basel khayat",
+      "jamal suliman",
+      "maxim khalil",
+      "khaled taja",
+      "ghassan massoud"
+    ],
+    "countries": [
+      "syria",
+      "egypt",
+      "saudi arabia",
+      "tunis",
+      "lebanon",
+      "iraq",
+      "united states",
+      "germany",
+      "france",
+      "united kingdom"
+    ],
+    "brands": [
+      "nike",
+      "burger king",
+      "samsung",
+      "asus",
+      "zara",
+      "redmi",
+      "audi",
+      "bmw",
+      "tesla",
+      "google",
+      "apple"
+    ]
+  }
+]

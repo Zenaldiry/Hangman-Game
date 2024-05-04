@@ -1,0 +1,208 @@
+* {
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin: 30px auto;
+    font-size: 40px;
+  }
+  .gameInfo {
+    margin: 15px auto;
+  }
+  .the-game {
+    display: flex;
+    .the-draw {
+      width: 500px;
+      height: 300px;
+      position: relative;
+      min-height: 200px;
+      min-width: 200px;
+      border: solid 1px;
+      .base {
+        position: absolute;
+        height: 4px;
+        background-color: #222;
+        bottom: 0;
+        width: 70px;
+      }
+      .stand {
+        height: 200px;
+        background-color: #222;
+        width: 4px;
+        position: absolute;
+        left: 35px;
+        bottom: 0;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100px;
+          height: 4px;
+          background-color: #222;
+        }
+      }
+      .hang {
+        position: absolute;
+        height: 40px;
+        width: 4px;
+        left: 135px;
+        top: 88px;
+        background-color: #222;
+      }
+      .rope {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: dashed 4px #222;
+        position: absolute;
+        top: 125px;
+        left: 109px;
+      }
+      .head {
+        width: 40px;
+        height: 40px;
+        background-color: #222;
+        border-radius: 50%;
+        position: absolute;
+        top: 135px;
+        left: 118px;
+      }
+      .body {
+        background-color: #222;
+        height: 70px;
+        width: 4px;
+        position: absolute;
+        top: 175px;
+        left: 136px;
+      }
+      .hands {
+        width: 50px;
+        height: 4px;
+        background-color: #222;
+        position: absolute;
+        top: 195px;
+        left: 114px;
+      }
+      .legs {
+        position: relative;
+        &::before {
+          content: "";
+          width: 30px;
+          height: 4px;
+          background-color: #222;
+          position: absolute;
+          top: 250px;
+          left: 136px;
+          rotate: 30deg;
+        }
+        &::after {
+          content: "";
+          width: 30px;
+          height: 4px;
+          background-color: #222;
+          position: absolute;
+          top: 250px;
+          left: 109px;
+          rotate: -30deg;
+        }
+      }
+    }
+  }
+  .the-letters {
+    width: 500px;
+    height: 300px;
+    border: solid 1px;
+    display: flex;
+    flex-wrap: wrap;
+    .letter-box {
+      margin: 5px;
+      padding: 20px;
+      text-transform: capitalize;
+      background-color: #20a0e1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .words-container {
+    margin: 40px;
+    display: flex;
+    margin: 20px auto;
+    flex-wrap: wrap;
+
+    div {
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.category {
+  color: red;
+}
+.last {
+  color: red;
+  margin: 0px 5px;
+}
+.pop {
+  position: absolute;
+  background-color: #20a1e1;
+  color: white;
+  width: 766px;
+  height: 406px;
+  top: 46%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  font-size: 35px;
+}
+
+@media (max-width: 776px) {
+  .the-game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .the-draw {
+      width: 400px !important;
+    }
+    .the-letters {
+      height: 400px;
+      width: 400px;
+    }
+  }
+
+  .pop {
+    width: 400px;
+    height: 400px;
+    top: 76%;
+    left: 50%;
+    font-size: 18px;
+  }
+}
+.replay {
+  padding: 15px;
+  margin: 30px;
+  background-color: white;
+  color: #20a0e1;
+  cursor: pointer;
+  border: none;
+  font-weight: 800;
+}
