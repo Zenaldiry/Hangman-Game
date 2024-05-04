@@ -4,11 +4,12 @@ const category = document.querySelector(".category");
 const drawDiv = document.querySelector(".the-draw");
 const popup = document.querySelector(".pop");
 const replayBtn = document.querySelector(".replay");
+let endgame = false;
 //creating letters and adding them to html ==============================================
 const letters = "abcdefghijklmnopqrstuvwxyz";
 const lettersArray = Array.from(letters);
 lettersArray.forEach((letter) => {
-  const span = document.createElement("span");
+  const span = document.createElement("button");
   span.className = "letter-box";
   const spanNode = document.createTextNode(letter);
   span.append(spanNode);
@@ -79,6 +80,7 @@ getData()
           theLetterIsFalse();
         }
         result();
+        disableBtns();
       });
     });
     const theLetterIsTrue = (letterClicked, letterInput, index) => {
@@ -99,6 +101,7 @@ getData()
           `<div><span>you win and the word is</span>  <span class="last">${randomWord.toUpperCase()}</span></div>`
         );
         popup.style.display = "flex";
+        return (endgame = true);
       }
       if (loseCounter === drawDiv.children.length) {
         popup.insertAdjacentHTML(
@@ -106,10 +109,18 @@ getData()
           `<div><span>you lose and the word is </span>  <span class="last">${randomWord.toUpperCase()}</span></div>`
         );
         popup.style.display = "flex";
+        return (endgame = true);
       }
     };
   });
-
 replayBtn.addEventListener("click", () => {
   location.reload();
 });
+//function to disable btns
+const disableBtns = () => {
+  if (endgame === true) {
+    [...letterContainer.children].forEach((letter) => {
+      letter.setAttribute("disabled", "disabled");
+    });
+  }
+};
