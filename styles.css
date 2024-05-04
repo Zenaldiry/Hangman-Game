@@ -119,6 +119,7 @@ body {
     border: solid 1px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     .letter-box {
       margin: 5px;
       padding: 20px;
@@ -136,6 +137,7 @@ body {
     display: flex;
     margin: 20px auto;
     flex-wrap: wrap;
+    justify-content: center;
 
     div {
       width: 40px;
